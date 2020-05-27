@@ -6,7 +6,7 @@ The paper can be downloaded here: https://newq.net/dl/pub/ModifyingCompressedVox
 
 Video: https://youtu.be/GQAwDn1bh0E
 
-Talk: https://youtu.be/ltkk_nlMhQo
+Talk: https://youtu.be/ltkk_nlMhQo?t=254
 
 ## Demo
 
