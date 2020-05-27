@@ -8,6 +8,10 @@ Video: https://youtu.be/GQAwDn1bh0E
 
 Talk: https://youtu.be/ltkk_nlMhQo?t=254
 
+## Abstract
+
+Voxels are a popular choice to encode complex geometry. Their regularity makes updates easy and enables random retrieval of values. The main limitation lies in the poor scaling with respect to resolution. Sparse voxel DAGs (Directed Acyclic Graphs) overcome this hurdle and offer high-resolution representations for real-time rendering but only handle static data. We introduce a novel data structure to enable interactive modifications of such compressed voxel geometry without requiring de- and recompression. Besides binary data to encode geometry, it also supports compressed attributes (e.g., color). We illustrate the usefulness of our representation via an interactive large-scale voxel editor (supporting carving, filling, copying, and painting).
+
 ## Demo
 
 A downloadable demo for Windows can be found here: https://drive.google.com/open?id=10vyCm39hC-Z-dnrEyBo2D4GIFlkPVOXc
