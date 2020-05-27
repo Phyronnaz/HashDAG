@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="src\.vscode\ipch\63145da166a82a96\mmap_address.bin" />
+    <None Include="src\.vscode\ipch\6af67995cd3a972\mmap_address.bin" />
+    <None Include="src\.vscode\ipch\9b92240e3986476\mmap_address.bin" />
+    <None Include="src\hacky_profiler.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\dag_tracer.cu" />
+    <CudaCompile Include="src\tracer.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\array.h" />
+    <ClInclude Include="src\containers.h" />
+    <ClInclude Include="src\cuda_error_check.h" />
+    <ClInclude Include="src\cuda_gl_buffer.h" />
+    <ClInclude Include="src\cuda_math.h" />
+    <ClInclude Include="src\cuda_memory.h" />
+    <ClInclude Include="src\dags\base_dag.h" />
+    <ClInclude Include="src\color_utils.h" />
+    <ClInclude Include="src\dags\dag_utils.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_colors.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_editors.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_edits.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_factory.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_globals.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_dag_utils.h" />
+    <ClInclude Include="src\dags\hash_dag\hash_table.h" />
+    <ClInclude Include="src\dags\hash_dag\node_ptr.h" />
+    <ClInclude Include="src\dags\basic_dag\basic_dag.h" />
+    <ClInclude Include="src\dag_info.h" />
+    <ClInclude Include="src\dag_tracer.h" />
+    <ClInclude Include="src\engine.h" />
+    <ClInclude Include="src\FastNoise.h" />
+    <ClInclude Include="src\fixed_weight_size_colors.h" />
+    <ClInclude Include="src\glfont.h" />
+    <ClInclude Include="src\gmath\Matrix3x3.h" />
+    <ClInclude Include="src\gmath\Quaternion.h" />
+    <ClInclude Include="src\gmath\Vector2.h" />
+    <ClInclude Include="src\gmath\Vector3.h" />
+    <ClInclude Include="src\hacky_profiler.hpp" />
+    <ClInclude Include="src\memory.h" />
+    <ClInclude Include="src\path-avx.h" />
+    <ClInclude Include="src\path.h" />
+    <ClInclude Include="src\replay.h" />
+    <ClInclude Include="src\script_definitions.h" />
+    <ClInclude Include="src\serializer.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\stats.h" />
+    <ClInclude Include="src\tracer.h" />
+    <ClInclude Include="src\typedefs.h" />
+    <ClInclude Include="src\utils.h" />
+    <ClInclude Include="src\camera_view.h" />
+    <ClInclude Include="src\variable_weight_size_colors.h" />
+    <ClInclude Include="src\video.h" />
+    <ClInclude Include="third_party\fontstash\include\fontstash.h" />
+    <ClInclude Include="third_party\fontstash\include\stb_truetype.h" />
+    <ClInclude Include="third_party\tracy\Tracy.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dags\hash_dag\hash_dag_factory.cpp" />
+    <ClCompile Include="src\dags\hash_dag\hash_table.cpp" />
+    <ClCompile Include="src\dags\basic_dag\basic_dag.cpp" />
+    <ClCompile Include="src\engine.cpp" />
+    <ClCompile Include="src\FastNoise.cpp" />
+    <ClCompile Include="src\fontstash.cpp" />
+    <ClCompile Include="src\glfont.cpp" />
+    <ClCompile Include="src\hacky_profiler.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memory.cpp" />
+    <ClCompile Include="src\replay.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\stats.cpp" />
+    <ClCompile Include="src\video.cpp" />
+    <ClCompile Include="third_party\tracy\TracyClient.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{465D2752-0DC5-4D73-9840-3A49B15E7C68}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DAGedits</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>src;third_party/fontstash/include;third_party/tracy;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>src;third_party/fontstash/include;third_party/tracy;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>TRACY_ENABLE;NDEBUG;_CONSOLE;_ITERATOR_DEBUG_LEVEL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>src\moderngpu\include;%(AdditionalIncludeDirectories);$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cudart_static.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <GenerateLineInfo>true</GenerateLineInfo>
+      <CodeGeneration>compute_61,sm_61</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Warning>InheritFromHost</Warning>
+      <AdditionalCompilerOptions>/wd4668</AdditionalCompilerOptions>
+      <AdditionalOptions>-Xcompiler "/wd 4201 /wd 4099 /wd 4706 /wd4324 /wd4515 /wd4127 /wd4714" --expt-relaxed-constexpr --expt-extended-lambda %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <CudaLink>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>TRACY_ENABLE;NDEBUG;_CONSOLE;_ITERATOR_DEBUG_LEVEL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>src\moderngpu\include;%(AdditionalIncludeDirectories);$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cudart_static.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <GenerateLineInfo>true</GenerateLineInfo>
+      <CodeGeneration>compute_61,sm_61</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Warning>InheritFromHost</Warning>
+      <AdditionalCompilerOptions>/wd4668</AdditionalCompilerOptions>
+      <AdditionalOptions>-Xcompiler "/wd 4201 /wd 4099 /wd 4706 /wd4324 /wd4515 /wd4127 /wd4714" --expt-relaxed-constexpr --expt-extended-lambda %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <CudaLink>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\glfw.3.3.0.1\build\native\glfw.targets" Condition="Exists('packages\glfw.3.3.0.1\build\native\glfw.targets')" />
+    <Import Project="packages\unofficial-flayan-glew.redist.2.1.0\build\native\unofficial-flayan-glew.redist.targets" Condition="Exists('packages\unofficial-flayan-glew.redist.2.1.0\build\native\unofficial-flayan-glew.redist.targets')" />
+    <Import Project="packages\unofficial-flayan-glew.2.1.0\build\native\unofficial-flayan-glew.targets" Condition="Exists('packages\unofficial-flayan-glew.2.1.0\build\native\unofficial-flayan-glew.targets')" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\glfw.3.3.0.1\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glfw.3.3.0.1\build\native\glfw.targets'))" />
+    <Error Condition="!Exists('packages\unofficial-flayan-glew.redist.2.1.0\build\native\unofficial-flayan-glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\unofficial-flayan-glew.redist.2.1.0\build\native\unofficial-flayan-glew.redist.targets'))" />
+    <Error Condition="!Exists('packages\unofficial-flayan-glew.2.1.0\build\native\unofficial-flayan-glew.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\unofficial-flayan-glew.2.1.0\build\native\unofficial-flayan-glew.targets'))" />
+  </Target>
+</Project>
