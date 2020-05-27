@@ -14,7 +14,7 @@ A downloadable demo for Windows can be found here: https://drive.google.com/open
 
 ## Performance Note
 
-The demo linked above uses the Epic Citadel at a resolution of 2^17. It will require a GPU with at least 8GB of VRAM (6 might work too).
+The demo linked above uses the Epic Citadel at a resolution of 2^17. It will require a CUDA-capable GPU with at least 8GB of VRAM (6 might work too).
 
 On Windows, the performance is degraded by the Windows Display Driver. Rendering should be at least twice as fast on Linux, for the same machine.
 
