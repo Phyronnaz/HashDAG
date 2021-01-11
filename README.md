@@ -2,7 +2,7 @@
 
 This repo holds the source code of our paper 'Interactively Modifying Compressed Sparse Voxel Representations'.
 
-The paper can be downloaded here: https://newq.net/dl/pub/ModifyingCompressedVoxels-main.pdf
+The paper can be downloaded here: https://graphics.tudelft.nl/Publications-new/2020/CBE20/ModifyingCompressedVoxels-main.pdf
 
 Video: https://youtu.be/GQAwDn1bh0E
 
