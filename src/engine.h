@@ -108,6 +108,7 @@ public:
     void destroy();
 
 	void toggle_fullscreen();
+    static void framebuffer_size_callback(GLFWwindow* window_, int width_, int height_);
 
 private:
     struct InputState

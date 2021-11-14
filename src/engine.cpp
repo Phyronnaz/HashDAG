@@ -751,6 +751,10 @@ void Engine::tick()
 	HACK_PROFILE_FRAME_ADVANCE();
 }
 
+void Engine::framebuffer_size_callback(GLFWwindow* window_, int width_, int height_)
+{
+	glViewport(0, 0, width_, height_);
+}
 void Engine::init(bool inheadLess)
 {
 	PROFILE_FUNCTION();
@@ -795,6 +799,7 @@ void Engine::init_graphics()
 		exit(1);
 	}
 	glfwMakeContextCurrent(window);
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glfwSetKeyCallback(window, key_callback);
 	glfwSetMouseButtonCallback(window, mouse_callback);
 	glfwSetScrollCallback(window, scroll_callback);
@@ -971,8 +976,8 @@ void Engine::loop_graphics()
 		// <TESTING>
 		glf::add_line( fontctx, dynamicText, 100.f, 1080-50.f, "Testing, testing!" );
 		glf::add_line( fontctx, dynamicText, glf::EFmt::glow, 100.f, 1080-75.f, "Testing, testing!" );
-		glf::add_line( fontctx, dynamicText, 100.f, 1080-100.f, "💩" );
-		glf::add_line( fontctx, dynamicText, glf::EFmt::glow, 150.f, 1080-100.f, "💩" );
+		glf::add_line( fontctx, dynamicText, 100.f, 1080-100.f, "?" );
+		glf::add_line( fontctx, dynamicText, glf::EFmt::glow, 150.f, 1080-100.f, "?" );
 		glf::add_line( fontctx, dynamicText, glf::EFmt::glow, 100.f, 1080-125.f, "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσ/ςΤτΥυΦφΧχΨψΩω" );
 		// </TESTING>
 #endif
