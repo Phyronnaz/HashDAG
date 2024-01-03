@@ -14,7 +14,7 @@ Voxels are a popular choice to encode complex geometry. Their regularity makes u
 
 ## Demo
 
-A downloadable demo for Windows can be found here: https://drive.google.com/open?id=10vyCm39hC-Z-dnrEyBo2D4GIFlkPVOXc
+A downloadable demo for Windows can be found here: https://drive.google.com/file/d/10vyCm39hC-Z-dnrEyBo2D4GIFlkPVOXc/view?usp=sharing
 
 ## Performance Note
 
@@ -63,7 +63,7 @@ The code can be build on Windows using the included Visual Studio solution, and 
 
 On Linux you'll need to install GLFW3 and GLEW.
 
-You will need to download the binary files from here, and put them under `data`: https://drive.google.com/open?id=1P3T_wlC3vOcxQSKh9QD0WtB3yNlbPLV2
+You will need to download the binary files from here, and put them under `data`: https://drive.google.com/drive/folders/1sIYzKSAmOoMA9sfqzkpkF_LiN2HYKxxp?usp=sharing
 
 ## Settings
 
